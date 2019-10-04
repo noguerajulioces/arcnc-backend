@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 const routes = require('./routes');
 
@@ -13,6 +14,7 @@ mongoose.connect('mongodb+srv://aircnc:aircnc@cluster0-ovuqt.mongodb.net/test?re
 
 //res = devolve uma resposta 
 
+app.use(cors({}));
 app.use(express.json());
 app.use(routes);
 
