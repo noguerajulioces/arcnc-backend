@@ -11,7 +11,7 @@ const SpotSchema = new mongoose.Schema({
     }
 }, {
   toJSON: {
-    virtuals = true,
+    virtuals: true,
   },
 });
 
